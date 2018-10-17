@@ -21,4 +21,4 @@ Akkroo automated server build task
 
 ## Prerequisites
 
-* Ansible needs to be installed (providers packager manager should be used rather than pip)
+* Install pip and then the latest ansible version
