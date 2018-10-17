@@ -1,0 +1,10 @@
+---
+
+
+- name: add repositery for virtualbox
+  yum_repository:
+    name: virtualbox
+    base_url:  http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo  
+
+- name: install virtualbox
+  yum: name=virtualbox

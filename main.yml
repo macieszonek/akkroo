@@ -1,9 +1,10 @@
 ---
 
-- name: setup vagrant on the local machine
+- name: setup vagrant and providers on the local machine
   hosts: localhost
   connection: local
   remote_user: ec2-user
   become: yes
   roles:
-  - { role: vagrant, tags: vagrant }
+  - { role: vagrant_providers, tags: vagrant_providers, provider: virtualbox }
+  - { role: vagrant, tags: vagrant, provider: virtualbox }

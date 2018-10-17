@@ -1,10 +1,14 @@
 ---
 
 - name: ensure vagrant template directory exists
-  file: state=directory path=/usr/local/etc/vagrant/
+  file: state=directory path=/usr/local/etc/vagrant/{{item}}
+  with_items:
+  - webserver1
+  - webserver2
+  - loadbalancer
 
 - name: template vagrant files
-  template: src=vagrant_template dest=/usr/local/etc/vagrant/{{item}}
+  template: src=vagrant_template dest=/usr/local/etc/vagrant/{{item}}/Vagrantfile
   with_items:
   - webserver1
   - webserver2
