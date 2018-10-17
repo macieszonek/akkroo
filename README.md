@@ -18,7 +18,10 @@ Akkroo automated server build task
 ## References ##
 
 [ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ] - Markdown cheatsheet
+[ https://docs.ansible.com/ansible/2.5/scenario_guides/guide_vagrant.html ] - Vagrant and ansible docs
 
 ## Prerequisites
 
-* Install pip and then the latest ansible version
+* Install pip and then the latest ansible version (2.7)
+
+## 

@@ -3,7 +3,6 @@
 - include: install_vagrant.yml
   tags: install_vagrant
 
-#
-#- include: provision_vagrant.yml
-#  tags: provision_vagrant
+- include: provision_vagrant.yml
+  tags: provision_vagrant
 
