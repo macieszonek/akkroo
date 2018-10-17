@@ -10,10 +10,14 @@ Akkroo automated server build task
 *	Test and demonstrate that load balancing works and include evidence.
 *	During the development process, check your project into git and push commits “little and often” so we can follow your development process.
 *	You should provide suitable documentation in your git repo to allow others to recreate your solution and tests.
-..*	You should make use of markdown formatting to enhance your documentation.
-..*	You should consider that others might not use the same Vagrant providers and hardware as you.
-..*	Reference and credit any external resources you used whilst preparing this task.
+*	You should make use of markdown formatting to enhance your documentation.
+*	You should consider that others might not use the same Vagrant providers and hardware as you.
+*	Reference and credit any external resources you used whilst preparing this task.
 *	Provide us with a link to your git repository so we can review the results
+
+## References ##
+
+[ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ] - Markdown cheatsheet
 
 ## Prerequisites
 
