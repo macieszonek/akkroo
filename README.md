@@ -39,3 +39,4 @@ Akkroo automated server build task
 * Different host addresses need to work with named based virtualhost config
 * Test playbooks on different host OS
 * Neaten up documentation and add some formatting
+* Ensure all services start at boot
