@@ -1,10 +1,11 @@
 # https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/
 # https://www.nginx.com/resources/wiki/start/topics/examples/full/
+#
 
 server { # php/fastcgi
     listen       80 {% if item.value.default == 'true' %}default{% endif %};
     server_name  {{item.value.servername}};
-    access_log   logs/{{item.value.servername}}.access.log  main;
+#    access_log   logs/{{item.value.servername}}.access.log  main;
     root         html;
 
 location ~ [^/]\.php(/|$) {
