@@ -1,0 +1,4 @@
+---
+
+- name: copy template accross
+  template: src=index.j2 dest=/usr/share/nginx/html/index.html
