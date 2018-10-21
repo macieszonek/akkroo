@@ -1,4 +1,11 @@
 # https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/
+# https://www.nginx.com/resources/wiki/start/topics/examples/full/
+
+server { # php/fastcgi
+    listen       80;
+    server_name  {{item.value.servername}};
+    access_log   logs/{{item.value.servername}}.access.log  main;
+    root         html;
 
 location ~ [^/]\.php(/|$) {
     fastcgi_split_path_info ^(.+?\.php)(/.*)$;
@@ -20,5 +27,6 @@ location ~ [^/]\.php(/|$) {
     # i.e. /etc/nginx/fastcgi_params or in the parent contexts,
     # please comment off following line:
     # fastcgi_param  SCRIPT_FILENAME   $document_root$fastcgi_script_name;
+}
 }
 
