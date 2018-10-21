@@ -1,7 +1,7 @@
 ---
 
 - name: setup the webservers
-  hosts: web
+  hosts: all !lb
   user: vagrant
   become: yes
   roles:
