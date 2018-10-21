@@ -1,0 +1,9 @@
+---
+
+- name: test playbook running on vagrant
+  hosts: web
+  become: yes
+  tasks:
+
+  - name: create dir
+    file: type=directory name=/tmp/test123
