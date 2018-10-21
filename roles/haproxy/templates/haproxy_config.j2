@@ -69,5 +69,6 @@ frontend main
 backend app-main
     balance roundrobin                                     #Balance algorithm
     option httpchk HEAD / HTTP/1.1\r\nHost:\ localhost    #Check the server application is up and healty - 200 status code
-    server webserver1 192.168.1.104:80 check                 #webserver11 
-    server webserver2 192.168.1.105:80 check                 #webserver2
+{% for h in groups['webgroup'] %}
+   server webserver{{h}} {{ hostvars[h].ansible_host }}:80 check
+{% endfor %}
