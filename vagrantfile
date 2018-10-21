@@ -10,6 +10,11 @@ Vagrant.configure(2) do |config|
     web.vm.provision :ansible do |ansible|
       ansible.limit = "all"
       ansible.playbook = "web.yml"
+      ansible.groups = {
+        "web" => [
+          "web"
+        ]
+	}
       end
   end
 
@@ -24,9 +29,13 @@ Vagrant.configure(2) do |config|
     lb.vm.provision :ansible do |ansible|
       ansible.limit = "all"
       ansible.playbook = "lb.yml"
+      ansible.groups = {
+        "lb" => [
+          "lb"
+        ]
+	}
       end
 
   end
-
 
 end
