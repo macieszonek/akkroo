@@ -23,5 +23,19 @@ Akkroo automated server build task
 ## Prerequisites
 
 * Install pip and then the latest ansible version (2.7)
+* Ensure you have a suitable provider installed
 
 ## 
+
+## Documentation ##
+
+* Run "vagrant up" inside the directory with the VagrantFile to deploy web machines and load balancer.
+* Port 80 will be mapped from the host machine to the load balancer. Load http://192.168.50.20 from the host machine to see the webpage load balanced across the webhosts (ensure its not cached in browser)
+
+## TODO ##
+
+* Provide an option to generate the vagrantfile automatically with provider parametrisation
+* Build fpm role and ensure nginx can pass php pages to fpm
+* Different host addresses need to work with named based virtualhost config
+* Test playbooks on different host OS
+* Neaten up documentation and add some formatting
