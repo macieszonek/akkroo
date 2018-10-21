@@ -1,9 +1,14 @@
 ---
 
-- name: test playbook running on vagrant
+- name: setup the webservers
   hosts: web
+  user: vagrant
   become: yes
-  tasks:
+  roles:
 
-  - name: create dir
-    file: type=directory name=/tmp/test123
+  - { role: nginx, tags: nginx  }
+  - { role: phpfpm, tags: php-fpm  }
+  - { role: code, tags: code  }
+
+
+

@@ -1,0 +1,12 @@
+---
+
+- name: setup the load balancer
+  hosts: lb
+  user: vagrant
+  become: yes
+  roles:
+
+  - { role: haproxy, tags: haproxy  }
+
+
+
