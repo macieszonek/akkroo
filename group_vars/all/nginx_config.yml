@@ -4,8 +4,8 @@ nginx_config:
   helloworld:
     servername: www.helloworld.com
     fpmport: 10000
-    default: no
+    default: false
   healthcheck:
     servername: "{{ansible_default_ipv4.address}}"
     fpmport: 10001
-    default: yes
+    default: true
