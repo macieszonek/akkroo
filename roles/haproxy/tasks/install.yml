@@ -5,11 +5,10 @@
 - name: install haproxy
   yum: name=haproxy
 
-- debug: msg="{{item}}"
-  with_items: "{{test123}}"
+- set_fact: web_machines="{{ansible_default_ipv4.address}}"
+  delegate_to: web
 
-  #- debug: msg="{{item}}"
-  #with_items: "{{ hostvars[groups['web']] }}"
+- debug: msg="{{ web_machines }}"
 
 - name: haproxy config
   template: src=haproxy_config.j2 dest=/etc/haproxy/haproxy.cfg
