@@ -1,1 +1,3 @@
 .vagrant/*
+vagrantfile
+hosts.ini

@@ -1,9 +1,18 @@
 ---
 
-- name: setup vagrant and providers on the local machine
+- name: setup vagrant on the host machine
   hosts: localhost
   connection: local
   remote_user: ec2-user
   become: yes
+  vars_prompt:
+  - name: provider
+    prompt: "Please enter the name of the provider you will use (default virtualbox)"
+    default: "virtualbox"
+    private: no
+  - name: web_num
+    prompt: "Please enter how many webservers you would like to provision (default 2)"
+    default: 2
+    private: no
   roles:
-  - { role: vagrant, tags: vagrant, provider: virtualbox }
+  - { role: vagrant, tags: vagrant }
