@@ -17,15 +17,17 @@ Akkroo automated server build task
 
 ## References ##
 
-[ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ] - Markdown cheatsheet
-[ https://docs.ansible.com/ansible/2.5/scenario_guides/guide_vagrant.html ] - Vagrant and ansible docs
-[ https://www.howtoforge.com/tutorial/how-to-setup-haproxy-as-load-balancer-for-nginx-on-centos-7/ ] - Haproxy reference
+Markdown cheatsheet
+[ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ]
+Vagrant and ansible docs
+[ https://docs.ansible.com/ansible/2.5/scenario_guides/guide_vagrant.html ]
+Haproxy reference
+[ https://www.howtoforge.com/tutorial/how-to-setup-haproxy-as-load-balancer-for-nginx-on-centos-7/ ]
 
 ## Prerequisites
 
 * Install pip and then the latest ansible version (2.7)
 * Ensure you have a suitable provider installed
-* Install ansible
 * Install vagrant
 
 ## Documentation ##
