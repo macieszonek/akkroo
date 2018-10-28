@@ -32,14 +32,14 @@ Akkroo automated server build task
 
 ## Documentation ##
 
-Its a 2 step process to get up and running
+*Its a 2 step process to get up and running*
+
+The first step generates your inventory and vagrant files
 
 ```
-ansible-playbook main.yml
+- ansible-playbook main.yml
+- vagrant up
 
-```
-```
-vagrant up
 ```
 
 * Port 80 will be mapped from the host machine to the load balancer. Load http://192.168.50.20 from the host machine to see the webpage load balanced across the webhosts (ensure its not cached in browser)
