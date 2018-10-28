@@ -28,27 +28,28 @@ Akkroo automated server build task
 * Install ansible
 * Install vagrant
 
-## 
-
 ## Documentation ##
 
 *Its a 2 step process to get up and running*
 
-The first step generates your inventory and vagrant files
-
 ```
-- ansible-playbook main.yml
-- vagrant up
+1. ansible-playbook main.yml
+2. vagrant up
 
 ```
 
-* Port 80 will be mapped from the host machine to the load balancer. Load http://192.168.50.20 from the host machine to see the webpage load balanced across the webhosts (ensure its not cached in browser)
+* Once the servers are built and provisioned, you can view static pages load balanced via URL: http://192.168.50.20
+* You can also view php pages, add domain www.helloworld.com to your host file pointing at 192.168.50.20 and then browser URL: http://www.helloworld.com/akkroo.php
 
-## TODO ##
 
-* Provide an option to generate the vagrantfile automatically with provider parametrisation
-* Build fpm role and ensure nginx can pass php pages to fpm
-* Different host addresses need to work with named based virtualhost config
-* Test playbooks on different host OS
-* Neaten up documentation and add some formatting
-* Ensure all services start at boot
+## Features ##
+
+* Added support for any number of web servers
+* Haproxy dynamically writes its config file based on how many hosts exist and discovers them using an ansible group
+* Added parametrisation for any provider
+* Role based tasks for easy re-use
+
+## Issues ##
+
+* Whilst learning how to use vagrant I was unaware of the .vagrant directory and I accidently commited changes to this directory. Once realized I added an ignore file for this and removed it from github.
+* I wanted to use ansible groups but I wasn't sure how to get vagrant to place any number of hosts into the same group. I decided to solve this by generating the inventory file and not using vagrants built in inventory generation.
