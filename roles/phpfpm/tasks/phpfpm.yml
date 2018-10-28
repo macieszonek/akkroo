@@ -1,5 +1,9 @@
 ---
 
+- name: disable selinux (required for port binding)
+  selinux:
+    state: disabled
+
 - name: install phpfpm
   yum: name={{item}}
   with_items:
