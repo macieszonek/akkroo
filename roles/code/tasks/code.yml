@@ -1,4 +1,8 @@
 ---
 
-- name: copy template accross
+- name: copy template for static html
   template: src=index.j2 dest=/usr/share/nginx/html/index.html
+
+
+- name: copy template for dyncamic php
+  template: src=akkroo.j2 dest=/var/www/akkroo.php

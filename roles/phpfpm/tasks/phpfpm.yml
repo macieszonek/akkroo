@@ -15,6 +15,10 @@
   notify: reload phpfpm
   with_dict: "{{nginx_config}}"
 
+- name: create log files
+  copy: dest=/var/log/php-fpm/{{item.key}}.log force=no content="" owner=apache
+  with_dict: "{{nginx_config}}"
+
 - name: ensure service is running
   service:
     name: php-fpm

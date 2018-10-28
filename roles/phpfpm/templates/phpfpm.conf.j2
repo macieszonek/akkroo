@@ -1,6 +1,6 @@
 [{{item.key}}]
-listen = 127.0.0.1:{{item.value.fpmport}}
-listen.allowed_clients = 127.0.0.1
+listen = {{ansible_eth1.ipv4.address}}:{{item.value.fpmport}}
+#listen.allowed_clients = 127.0.0.1
 user = apache
 group = apache
 pm = dynamic
@@ -18,3 +18,6 @@ rlimit_files = 4096
 rlimit_core = 0
 chdir = /var/www
 catch_workers_output = yes
+php_flag[display_errors] = on
+php_admin_value[error_log] = /var/log/php-fpm/{{item.key}}.log
+php_admin_flag[log_errors] = on
