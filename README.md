@@ -34,11 +34,14 @@ Haproxy reference
 
 *Its a 2 step process to get up and running*
 
-```
 1. Generate the vagrant file and inventory
-   *ansible-playbook main.yml*
+```
+   ansible-playbook main.yml
+
+```
 2. Deploy and provision the servers 
-   *vagrant up*
+```
+   vagrant up
 
 ```
 
