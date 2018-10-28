@@ -5,3 +5,13 @@
   with_items:
   - php
   - php-fpm
+
+- name: copy phpfpm configs
+  template: src=phpfpm.conf.j2 dest=/etc/php-fpm.d/{{item.key}}.conf
+  notify: reload phpfpm
+  with_dict: "{{nginx_config}}"
+
+- name: ensure service is running
+  service:
+    name: php-fpm
+    state: started

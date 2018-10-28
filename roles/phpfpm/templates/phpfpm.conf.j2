@@ -1,0 +1,20 @@
+[{{item.key}}]
+listen = 127.0.0.1:{{item.value.fpmport}}
+listen.allowed_clients = 127.0.0.1
+user = apache
+group = apache
+pm = dynamic
+pm.max_children = 6
+pm.start_servers = 3
+pm.min_spare_servers = 3
+pm.max_spare_servers = 5
+pm.max_requests = 500
+pm.status_path = /fpm-status
+ping.path = /ping
+request_terminate_timeout = 120s
+request_slowlog_timeout = 5s
+slowlog = /var/log/$pool.log.slow
+rlimit_files = 4096
+rlimit_core = 0
+chdir = /var/www
+catch_workers_output = yes
