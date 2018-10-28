@@ -19,17 +19,29 @@ Akkroo automated server build task
 
 [ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ] - Markdown cheatsheet
 [ https://docs.ansible.com/ansible/2.5/scenario_guides/guide_vagrant.html ] - Vagrant and ansible docs
+[ https://www.howtoforge.com/tutorial/how-to-setup-haproxy-as-load-balancer-for-nginx-on-centos-7/ ] - Haproxy reference
 
 ## Prerequisites
 
 * Install pip and then the latest ansible version (2.7)
 * Ensure you have a suitable provider installed
+* Install ansible
+* Install vagrant
 
 ## 
 
 ## Documentation ##
 
-* Run "vagrant up" inside the directory with the VagrantFile to deploy web machines and load balancer.
+Its a 2 step process to get up and running
+
+```
+ansible-playbook main.yml
+
+```
+```
+vagrant up
+```
+
 * Port 80 will be mapped from the host machine to the load balancer. Load http://192.168.50.20 from the host machine to see the webpage load balanced across the webhosts (ensure its not cached in browser)
 
 ## TODO ##
