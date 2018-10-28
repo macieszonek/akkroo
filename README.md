@@ -18,10 +18,15 @@ Akkroo automated server build task
 ## References ##
 
 Markdown cheatsheet
+
 [ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers ]
+
 Vagrant and ansible docs
+
 [ https://docs.ansible.com/ansible/2.5/scenario_guides/guide_vagrant.html ]
+
 Haproxy reference
+
 [ https://www.howtoforge.com/tutorial/how-to-setup-haproxy-as-load-balancer-for-nginx-on-centos-7/ ]
 
 ## Prerequisites
