@@ -1,6 +1,0 @@
----
-
-## Additonal providers can be added to this section
-
-- include: virtualbox.yml
-  when: provider == "virtualbox"
