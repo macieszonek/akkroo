@@ -1,0 +1,7 @@
+---
+
+- name: install phpfpm
+  yum: name={{item}}
+  with_items:
+  - php
+  - php-fpm

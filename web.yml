@@ -7,7 +7,7 @@
   roles:
 
   - { role: nginx, tags: nginx  }
-  - { role: phpfpm, tags: php-fpm  }
+  - { role: phpfpm, tags: phpfpm  }
   - { role: code, tags: code  }
 
 

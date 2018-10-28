@@ -9,3 +9,8 @@
 - name: nginx config
   template: src=nginx_config.j2 dest=/etc/nginx/conf.d/{{item.key}}.conf
   with_dict: "{{nginx_config}}"
+
+- name: ensure service is running
+  service:
+    name: nginx
+    state: started
